@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Save</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Mirza", serif;
+            font-weight: 400;
+            font-style: normal;
+            height: 100vh;
+            width: 100%;
+            background: #2BC0E4;
+            background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);
+            background: linear-gradient(to right, #EAECC6, #2BC0E4);
+
+
+        }
+
+
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button-container button:hover {
+            background-color: #6B7280;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex justify-center items-center gradient-background" style="color: #021B79;">
+        <main class="my-40 flex flex-col bg-white rounded-lg p-10 shadow-lg"
+            style="background-color: rgba(71, 201, 203, 0.74);">
+            <h1 class="text-4xl font-bold mb-6 text-center">Save the Text to File</h1>
+            <textarea id="textArea" cols="40" rows="15"
+                class="border border-blue-300 rounded-md p-4 placeholder-gray-500 placeholder-opacity-50 focus:outline-none focus:ring focus:border-blue-300 text-2xl bg-blue-100"
+                placeholder="Enter Your Text" oninput="getText()"></textarea>
+
+            <div class="button-container text-2xl">
+                <button id="downloadButton" class="bg-blue-500 text-white mr-4">Save as .txt</button>
+                <button class="bg-blue-500 text-white" id="saveAsHtmlButton">Save as .html</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
